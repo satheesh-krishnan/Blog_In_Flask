@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>STUDENT</title>
+<p>ADD</P>
+</head>
+<body>
+<form action="" method="post" name="login">
+<p><input name='add' type="submit" value="add"></p>
+<p><input name='display' type="submit" value="display"></p>
+</form>
+
+</body>
+</html>

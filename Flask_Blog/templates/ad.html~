@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ADD RECORD</title>
+<link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+<div class="container">
+<div class="text-success">
+<div class="text-center">
+<p style="font-size:25px">WELCOME</p>
+</div>
+</div>
+</div>
+</head>
+<body style="background-color:#9cf">
+<form action="" method="post" name="ad">
+<p class="col-lg-8 col-lg-offset-11"><input name='save' type='submit' value='logout'></p>
+<br><br><br><br><br><br><br><br>
+{% with messages=get_flashed_messages() %}
+{% if messages %}
+<div class="container">
+<div class="text-center">
+<p>ID &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{fo.ide(size=30)}}</p>
+<p>NAME &nbsp{{fo.name(size=30)}}</p>
+<p>MARKS{{fo.marks(size=30)}}</p>
+<P><input name='save' type='submit' value='save'>
+<input name='save' type='submit' value='delete'>
+<input name='save' type='submit' value='refresh'></p>
+</div>
+</div>
+
+
+{% for message in messages %}
+{% if message=='Saved' or message=='Deleted'%}
+<div class="text-center"><div class="text-success">{{message}}</div></div>
+{% endif %}
+{% endfor %}
+
+{% else %}
+<div class="container">
+<div class="text-center">
+<p>ID&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp {{fo.ide(size=30,value='')}}</p>
+<p>NAME &nbsp{{fo.name(size=30,value='')}}</p>
+<p>MARKS{{fo.marks(size=30,value='')}}</p>
+<P><input name='save' type='submit' value='save'>
+<input name='save' type='submit' value='delete'>
+<input name='save' type='submit' value='refresh'></p>
+</div>
+</div>
+
+{% endif %}
+
+{% endwith %}
+
+</form>
+{% block content %}{% endblock %}
+</body>
+</html>
+

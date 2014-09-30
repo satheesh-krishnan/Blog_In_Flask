@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+<div class="container">
+<div class="text-center">
+<div class="text-success">
+<h2 style="padding-top:80px">SIGNUP</h2>
+</div>
+</head>
+<body>
+<body style="background-color:#FFCCE5">
+<div class="text-primary">
+<form action="" method="post" name="loginn">
+<p style="padding-top:40px">NAME &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{fo.name(size=30,value='')}}</p>
+<p style="padding-top:10px">EMAILID &nbsp&nbsp&nbsp&nbsp{{fo.l(size=30,value='')}}</p>
+<p style="padding-top:10px">PASSWORD{{fo.p(size=30,value='')}}</p>
+
+<p><input name='add' type='submit' value='signup'></p>
+</div></div></div>
+</body>
+</html>

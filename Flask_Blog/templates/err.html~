@@ -1,0 +1,12 @@
+{%extends "ad.html" %}
+{% block content %}
+{% with messages=get_flashed_messages() %}
+
+
+<div class="text-center"><div class="text-danger">{{messages[0]}}
+</div></div>
+
+
+
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,25 @@
+<html>
+<link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+<div class="container">
+<div class="text-center">
+<div class="text-success">
+<p style="font-size:25px">STUDENT DATA</p>
+</div>
+
+<body style="background-color:#9cf">
+<br>
+<table>
+<tr><td>ID &nbsp</td> <td>NAME &nbsp</td> <td>MARKS</td></tr>
+
+{% for each in d %}
+
+<tr><td>{{each[0]}} &nbsp</td>  <td>{{each[1]}} &nbsp</td>     <td>{{each[2]}}</td></tr>
+{% endfor %}
+</table>
+</div>
+
+
+
+</body>
+</html>
+

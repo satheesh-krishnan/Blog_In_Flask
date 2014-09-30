@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<p>Welcome {{p}}</p>
+</head>
+<body>
+<form action="" method="post" value="user">
+<p><input name='add' type="submit" value='posts'></p>
+<p><input name='add' type="submit" value='create'></p>
+</body>

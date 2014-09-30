@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+
+
+<title>BLOG</title>
+
+</head>
+<body>
+<form action="" method="post" name="logi">
+<div class="text-primary">
+<div class="text-right">
+<p style="padding-top:10px;padding-right:85px">{{fo.sear(size=20)}}<input name='add' type="submit" value="search"></p></div></div>
+<div class="container">
+<div class="text-success">
+<div class="text-center">
+<h1 style="padding-top:70px;font-size:100px"><em>BLOGGIN</h1>
+<h3>SHARE YOUR BLOGS</h3></em>
+</div></div></div>
+
+<div class="text-center">
+<p style="size:30px"><input name='add' type="submit" value="signup" class="btn btn-primary btn-lg"></p>
+</div> 
+<body style="background-color:#FFCCE5">
+<div class="container">
+<div class="text-primary">
+
+<div class="text-right">
+<p>Already a Member?</p>
+
+<p>EMAILID {{fo.logi(size=30)}}</p>
+<p>PASSWORD {{fo.pasw(size=30)}}</p>
+<p><input name='add' type='submit' value='login'></p>
+
+{% with messages=get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+{{message}}
+{% endfor %}
+{% endif %}
+{% endwith %}
+</div></div></div>
+</body>
